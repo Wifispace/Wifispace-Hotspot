@@ -1,0 +1,305 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #737373;
+  font-size: 10px;
+  font-family: verdana;
+  background-image: url("../img/signBg3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+main {
+  /* background-color: red; */
+  width: 40%;
+  height: 520px;
+  margin-left: 30%;
+  margin-top: 30px;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1% 2%;
+}
+.logoutStatement {
+  /* background-color: green; */
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+  row-gap: 20px;
+  color: whitesmoke;
+}
+.logoutStatement h1 {
+  font-size: 29px;
+  /* font-family: serif; */
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-weight: 900;
+  text-align: center;
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: "Lobster Two", cursive;
+}
+.logoutStatement h2 {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-weight: 700;
+}
+
+ul {
+  margin-top: 30px;
+  width: 80%;
+  height: fit-content;
+  padding: 3%;
+  list-style: none;
+  /* background-color: orange; */
+  background-color: rgba(44, 44, 106, 0.7);
+
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+  /* color: rgb(218, 216, 216); */
+  color: whitesmoke;
+  /* color: black; */
+}
+ul li{
+   font-size: 12px;
+   text-shadow: 1px 1px 3px black;
+   width: 100%;
+   border-style: solid;
+   font-weight: 500;
+   border-color: transparent transparent rgb(44, 44, 44) transparent;
+   border-width: 2px;
+   margin-top: 10px;
+   position: relative;
+}
+ul li span{
+   position: absolute;
+   right: 0;
+}
+.loginForm{
+  width: 100%;
+  height: fit-content;
+  padding: 2%;
+  /* background-color: blue; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginForm input{
+  width: 40%;
+  height: 30px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: rgb(17, 17, 148);
+  cursor: pointer;
+  /* color: orange; */
+  color: white;
+  font-weight: 700;
+}
+.loginForm input:hover{
+  /* background-color: orange; */
+  /* background-color: rgba(114, 114, 238, 0.974); */
+  /* color: black; */
+  opacity: 0.7;
+}
+.loginForm input:active{
+  opacity: 0.2;
+}
+.firstLink{
+  position: fixed;
+  top: 90vh;
+  left: 5%;
+}
+.firstLink img{
+   height: 50px;
+   width: 50px;
+   border-radius: 100%;
+}
+
+
+/* mobile view */
+@media screen and (max-width:872px){
+  main{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    
+ }
+ .logoutStatement h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.logoutStatement h2 {
+  font-size: 11px;
+  text-align: center;
+}
+ul li{
+  font-size: 10px;
+}
+}

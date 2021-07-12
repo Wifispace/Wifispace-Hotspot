@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wifispace Login Page</title>
+	<link rel="stylesheet" href="./css/login.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Oswald:wght@600&display=swap');
+		</style>
+</head>
+
+<body>
+    
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+
+
+<section class="main">
+		<div class="noticeContainer">
+			<p class="welcomeMsg">Welcome to WifiSpace Networks</p>
+			<p class="signInMsg">Please, sign in below to use Internet</p>
+			<!-- $(if trial == 'yes')Free trial to DM us available,  -->
+			<div class="events">
+				<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+					Free Trial
+				</a>.
+				<a href="https://smarttech.com.ng/services/buy.php?">Buy Data</a>
+			</div>
+			$(endif)
+		</div>
+		<section class="formSection">
+            <!-- <div class="secondDiv">
+				<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)">
+					<img src="img/logo.png"></a>
+				</div> -->
+					<form class="firstFormEdit" name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+						                   
+						<input placeholder="UserID" name="username" type="text" value="$(username)"/>
+						<input name="password" type="password" placeholder="Enter Passcode" />
+		
+						<input class="btn" type="submit" value="SIGN IN" />
+					</form>
+		</section>
+	<div class="footerContainer">
+	<div class="footerCredit">Powered by <a href="https://wifispace.com.ng">WiFiSpace Networks</a></div>
+	$(if error)<div class="footerError">$(error)</div>$(endif)
+</div>
+</section>
+<a class="footerchat" href="https://wa.me/2348144872744"> <img src="img/walogo.jpg"> </a>
+
+<script type="text/javascript">
+G<!--
+  document.login.username.focus();
+//-->
+</script>
+<script src="chat.js"></script>
+
+</script>
+</body>
+</html>

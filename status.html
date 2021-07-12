@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wifispace Logout Page</title>
+	<link rel="stylesheet" href="./css/status.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Oswald:wght@600&display=swap');
+		</style>
+
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+
+ <body $(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+
+<main>
+<section class="statusContainer">
+	<div class="welcomeMsg">
+		$(if login-by == 'trial')
+		<h1>Welcome trial user!</h1>
+		$(elif login-by != 'mac')
+		<h2>Welcome $(username)!</h2>
+</div>
+
+<div class="userStatus">
+	$(endif)
+	<ul>
+		<li>IP address: <span>$(ip)</span></li>
+		<li>bytes up/down: <span>$(bytes-in-nice) / $(bytes-out-nice)</span></li>
+		$(if session-time-left)
+		<li>connected / left: <span>$(uptime) / $(session-time-left)</span></li>
+		$(else)
+		<li>connected: <span>$(uptime)</span></li>
+<!-- $(endif) -->
+<!-- $(if blocked == 'yes') -->
+	<!-- <tr><td align="right">status:</td><td><div style="color: #FF8080">
+<a href="$(link-advert)" target="hotspot_advert">advertisement <img src="img/logobottom.png"> </a> required</div></td>
+$(elif refresh-timeout)
+	<tr><td align="right">status refresh:</td><td>$(refresh-timeout)</td> -->
+		<li>status refresh: <span>$(refresh-timeout)</span></li>
+	</ul>
+$(endif)
+</div>
+
+
+</section>
+    
+
+
+
+
+<form class="formSpace" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+
+$(if login-by-mac != 'yes')
+<br>
+
+<input type="submit" value="log off">
+$(endif)
+    <br>
+    
+    <a class="firstLink" href="https://wa.me/2348144872744"> <img src="img/walogo.jpg"> </a>
+    
+    <br>
+    <p class="discountMsg">
+		Powered By SmartTechnologies
+	 </p>
+    
+</form>
+
+</main>
+
+ <!-- <a href="https://wa.me/2348144872744"> <img src="img/walogo.jpg" width="50" height="50"> </a> -->
+
+</script>
+<script src="chat.js"></script>
+
+</body>
+</html>

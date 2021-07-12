@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wifispace Logout Page</title>
+	<link rel="stylesheet" href="./css/logout.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Oswald:wght@600&display=swap');
+		</style>
+</head>
+
+
+<body>
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+
+<main>
+<section class="logoutStatement">
+	<h1>GoodBye, Wifispace wishes you well.</h1>
+	<h2>you have just logged out, Thank you for using our service...</h2>
+</section>
+
+<ul>
+<li>Username: <span> $(username) </span></li>
+<li>IP address: <span> $(ip) </span></li>
+<li>MAC address: <span> $(mac) </span></li>
+<li>session time: <span> $(uptime) </span></li>
+
+$(if session-time-left)
+
+<li>time left: <span> $(session-time-left) </span></li>
+
+$(endif)
+
+<li>bytes up/down:<span> $(bytes-in-nice) / $(bytes-out-nice) </span></li>
+</ul>
+<form class="loginForm" action="$(link-login)" name="login" onSubmit="return openLogin()">
+<input type="submit" value="log in">
+</form>
+<a class="firstLink" href="https://wa.me/2348144872744"> <img src="img/walogo.jpg"> </a>
+
+</main>
+</body>
+<script src="chat.js"></script>
+
+</html>
