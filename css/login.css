@@ -378,4 +378,11 @@ body {
   text-decoration: none;
   text-shadow: 3px 3px 5px black , -3px -3px 5px black;
 }
+.footerCredit a{
+  color:orange;
+  margin-top :-5%;
+  text-decoration: none;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px black;
+} 
 }
