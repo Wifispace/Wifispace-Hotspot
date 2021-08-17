@@ -334,12 +334,12 @@ body {
   text-shadow: 1px 1px 3px black;
 } 
 .discount{
-  font-size: 11px;
+  font-size: 9px;
   font-family: Arial, Helvetica, sans-serif;
   color: orange;
   text-shadow: 1px 1px 3px black;
   font-weight: 700;
-  margin-top: 5%;
+  margin-top: 10%;
   text-decoration: none;
   text-shadow: 3px 3px 5px black , -3px -3px 5px black;
   text-align: center;
@@ -368,17 +368,7 @@ body {
   width:60px;
   top: 85vh;
 }
-.discount{
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: orange;
-  text-shadow: 1px 1px 3px black;
-  font-weight: 700;
-  padding: 2%;
-  margin-top: 2%;
-  text-decoration: none;
-  text-shadow: 3px 3px 5px black , -3px -3px 5px black;
-}
+
 .footerCredit a{
   color:orange;
   margin-top :-5%;
