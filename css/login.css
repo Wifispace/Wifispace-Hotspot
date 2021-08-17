@@ -333,8 +333,8 @@ body {
   font-weight: 700;
   text-shadow: 1px 1px 3px black;
 } 
-.discount{
-  font-size: 9px;
+.discount a{
+  font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;
   color: orange;
   text-shadow: 1px 1px 3px black;
