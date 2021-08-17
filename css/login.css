@@ -333,6 +333,19 @@ body {
   font-weight: 700;
   text-shadow: 1px 1px 3px black;
 } 
+.discount{
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: orange;
+  text-shadow: 1px 1px 3px black;
+  font-weight: 700;
+  padding: 2%;
+  margin-top: 2%;
+  text-decoration: none;
+  text-shadow: 3px 3px 5px black , -3px -3px 5px black;
+}
+
+
 /* mobile view */
 @media screen and (max-width:872px){
   
